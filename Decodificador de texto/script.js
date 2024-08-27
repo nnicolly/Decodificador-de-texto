@@ -20,6 +20,7 @@ let inputTexto = document.querySelector('textarea');
 let btnCriptografar = document.getElementById('btn-criptografar');
 let btnDescriptografar = document.getElementById('btn-descriptografar');
 let outputContainer = document.getElementById('output-container');
+let btnCopiar = document.getElementById('btn-copiar');
 
 btnCriptografar.addEventListener('click', () => {
     let texto = inputTexto.value.toLowerCase();
@@ -46,8 +47,20 @@ function mostrarResultado(texto) {
         
         textResponseElement.innerHTML = "";
         textResponseElement.innerHTML = texto;
+        btnCopiar.style.display = "block"; 
         return;
     }
     notFoundContainer.style.display = "flex";
     responseContainer.style.display = "none";
+
+    btnCopiar.style.display = "none";
 }
+
+btnCopiar.addEventListener('click', () => {
+    let texto = document.getElementById("encrypted-text").innerText;
+    navigator.clipboard.writeText(texto).then(() => {
+        alert("Texto copiado para a área de transferência!");
+    }).catch(err => {
+        console.error("Falha ao copiar o texto: ", err);
+    });
+});

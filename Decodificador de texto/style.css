@@ -119,6 +119,22 @@ button {
     color: white;
 }
 
+#btn-copiar{
+    background: white;
+    color: #0A3871;
+    transition: 0.15s;
+}
+
+#btn-copiar:hover {
+    background: #98c0f5;
+    
+}
+
+#btn-copiar:active  {
+    background: #0A3871;
+    color: white;
+}
+
 aside {
     background-color: white;
     border-radius: 32px;
