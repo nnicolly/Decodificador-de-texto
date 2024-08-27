@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Decodificador de texto</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Corrigido e adicionado defer -->
 </head>
 
 <body>
@@ -36,15 +37,24 @@
             </div>
         </section>
         <aside>
-            <img src="ilustração.png" alt="Ilustração de uma pessoa analisando um diamante com uma lupa">
-
-            <div id="output-container">
-                <h1>
-                    Nenhuma mensagem encontrada
-                </h1>
-                <p>
-                    Digite um texto que você deseja criptografar ou descriptografar.
-                </p>
+            <div id="text-not-found">
+                <img id = "output-image" src="ilustração.png" alt="Ilustração de uma pessoa analisando um diamante com uma lupa">
+                <div id="output-container">
+                    <h1>
+                        Nenhuma mensagem encontrada
+                    </h1>
+                    <p>
+                        Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
+                </div>
+            </div>
+            <!-- div que vai aparecer apos clickar nos botoes -->
+            <div id="response"> 
+                <p id="encrypted-text"></p>
+                <button>
+                    Copiar
+                    <!-- botão de copiar, so vou deixar aqui para vc ter noção -->
+                </button>
             </div>
         </aside>
     </main>
